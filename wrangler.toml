@@ -1,0 +1,7 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "snagzo"
+compatibility_date = "2026-05-29"
+
+[pages_build_container]
+# Configures Cloudflare Pages to serve assets directly from the Android assets folder
+directory = "app/src/main/assets"

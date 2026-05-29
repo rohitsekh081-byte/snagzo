@@ -1,0 +1,19 @@
+# Netlify Configuration File
+# This file configures Netlify to deploy your web pages directly from the Android assets folder!
+
+[build]
+  # Tells Netlify to use the Android assets directory as your static website root
+  publish = "app/src/main/assets"
+
+[build.processing]
+  skip_processing = false
+
+# Custom headers for security and optimal hosting performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "public, max-age=0, must-revalidate"
